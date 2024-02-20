@@ -1,10 +1,10 @@
 This is the GitHub page for Matthew Morassutti's project proposal for BIOL550 - Phylogenetic Systematics, Cal Poly Humboldt, Spring 2024 Week 6
 
-**Matthew Morassutti 
-BIOL550	SPR’24	Week 6	Project Proposal **
+**Matthew Morassutti** 
+**BIOL550	SPR’24	Week 6	Project Proposal**
 
 
-**Draft Title: **
+**Draft Title:**
 Resolving the Ranges of Two Species of _Arborimus_
 
 **Question and Relevance:**
