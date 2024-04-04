@@ -1,0 +1,24 @@
+**Matthew Morassutti** 
+**BIOL 550 SPR'24 Project Proposal** UPDATED
+
+**Draft Title:**
+Resolving the ranges of _Marmota_ using Ultraconserved Elements
+
+**Question and Relevance**
+
+This project will aim to unravel the eevolutionary history of marmots (_Marmota sp._) by addressing their phylogenetic relationships. By using ultraconserved elements (UCEs) from all 15 extant marmot species, this project will pinpoint the divesification of marmots. The relevance of this project lies in understanding how marmots rapidly diversified during the Pleistocene in response to a changing climate in cold, seasonal environments. By improving our understanding of evolutionary dynamics in response to past environmental changes I will inform our understanding of species' responses to ongoing climate change and alterations to habitat. This helps us to better conserve these species by helping us know species relationships and cryptic diversity. 
+
+**Focal Organism Introduction**
+
+Marmots (_Marmota sp._) are a genus of large-bodied ground squirrels known for their rapid diversification during the Pleistocene epoch. Adapted to survive harsh, cold winters, they inhabit a wide range of habitats across the Holarctic region, from North America to the European Alps. Characterized by their large size, heightened sociality, and long periods of hibernation, marmots exhibit adaptations suited for seasonally cold and resource-scarce environments. Despite their broad geographic distribution, marmots show relatively little morphological evolution since their radiation, indicating a high degree of conservatism in their body plan. Their ecological versatility allows them to occupy various elevations and biomes, from sea level to high-altitude, hypoxic conditions. Marmots have been the subject of sociobiological research due to their diverse social organizations, making them valuable models for understanding social behaviors in response to environmental challenges.
+
+**Methods Overview**
+
+Using 95% and 75% supermatrices from Mills et al. 2023, UCE reads for Marmots will be partitioned using the entropy-based method SWSC-en, designed specifically for UCE Loci (Tagliacollo and Lanfear, 2018). PartitionFinder2 will be used to consolidate and identify the best substitution model for each partition. Maximum likelihood trees will be estimated for the concatenated dataset using IQ-TREE (Nguyen et al. 2015) with branch supports obtained using the oltrafast bootstrap method (UFboot; Hoang et al. 2017) and the SH-like approximate likelihood ratio test (SH-aLRT; Anisimova et al. 2011), both with 1000 replicates. 
+  
+A coalescent-based method will be used to estimate a phylogeny. UCE loci will be sorted by number of parsimony-informative sites using the _'phyluce_get_informative_sites'_ script, and th dataset will be reduced to the top quartile of loci. A maximum-likelihood gene tree will then be generated for each UCE locus in the reduced dataset using IQ-TREE, with branch supports obtained using UFboot and SH-aLRT. All branches with less than 10% will be collapsed (Zhang et al. 2018). Gene trees will be used to estimate a species tree with ASTRAL-III (Rabiee et al. 2019). For species that do not form monophyletic groups, individuals will be left as operational taxonomic units (OTUs) rather than categorizing individuals by species (will not use the -a flag option). 
+
+Divergence times will be estimated from the UCE data using the program MCMCTree (Yand and Rannala 2006), in PAML v4.9j (Yang 2007). Node ages will be calibrated using a set of eight fossils and three additional outgroups as in Mills et al. 2023. The UCE 75% complete alignment will be used as the input for the MCMCTree and tree topology will be fixed to the result of the 75% complete matrix. The root of the tree will be constrained to a minimum age of 40.4 Ma (based on the oldest known sciurid fossil, _Douglassciurus oaxacensis_; Ferusquia-Villafranca et al. 2018) and a maximum age of 56 Ma (based on _Acritoparamys_, te oldest stem member of Sciuromorpha; Ivy, 1990; Korth 1994). All other fossils used in Mills et al. 2023 will be used to place minimum dates on internal nodes. MCMCTree analysis will be completed with a two-step approach, established by dos Reis et al. 2012, and outlined in Mills et al. 2023. 
+
+
+  
